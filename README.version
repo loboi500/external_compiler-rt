@@ -1,4 +1,3 @@
-URL: http://llvm.org/git/compiler-rt.git
-Version: Rolling from upstream + cherry-picks
-BugComponent: 117395
-Owners: srhines, android-llvm
+version https://git-lfs.github.com/spec/v1
+oid sha256:dbde681963e4d51d06bb2828aca773bd452cf658c1151d58641fbff673a24d81
+size 138

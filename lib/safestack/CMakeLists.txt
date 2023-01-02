@@ -1,36 +1,3 @@
-add_custom_target(safestack)
-set_target_properties(safestack PROPERTIES
-  FOLDER "Compiler-RT Misc")
-
-set(SAFESTACK_SOURCES safestack.cc)
-
-include_directories(..)
-
-set(SAFESTACK_CFLAGS ${SANITIZER_COMMON_CFLAGS})
-
-if(APPLE)
-  # Build universal binary on APPLE.
-  add_compiler_rt_runtime(clang_rt.safestack
-    STATIC
-    OS osx
-    ARCHS ${SAFESTACK_SUPPORTED_ARCH}
-    SOURCES ${SAFESTACK_SOURCES}
-            $<TARGET_OBJECTS:RTInterception.osx>
-            $<TARGET_OBJECTS:RTSanitizerCommon.osx>
-            $<TARGET_OBJECTS:RTSanitizerCommonNoLibc.osx>
-    CFLAGS ${SAFESTACK_CFLAGS}
-    PARENT_TARGET safestack)
-else()
-  # Otherwise, build separate libraries for each target.
-  foreach(arch ${SAFESTACK_SUPPORTED_ARCH})
-    add_compiler_rt_runtime(clang_rt.safestack
-      STATIC
-      ARCHS ${arch}
-      SOURCES ${SAFESTACK_SOURCES}
-              $<TARGET_OBJECTS:RTInterception.${arch}>
-              $<TARGET_OBJECTS:RTSanitizerCommon.${arch}>
-              $<TARGET_OBJECTS:RTSanitizerCommonNoLibc.${arch}>
-      CFLAGS ${SAFESTACK_CFLAGS}
-      PARENT_TARGET safestack)
-  endforeach()
-endif()
+version https://git-lfs.github.com/spec/v1
+oid sha256:87afe047373e9820904575125d0606d7d1dacd00ea4cc6946d540b9bf327ed7d
+size 1105

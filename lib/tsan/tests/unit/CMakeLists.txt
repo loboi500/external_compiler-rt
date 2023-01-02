@@ -1,13 +1,3 @@
-set(TSAN_UNIT_TEST_SOURCES
-  tsan_clock_test.cc
-  tsan_flags_test.cc
-  tsan_mman_test.cc
-  tsan_mutex_test.cc
-  tsan_shadow_test.cc
-  tsan_stack_test.cc
-  tsan_sync_test.cc
-  tsan_unit_test_main.cc
-  tsan_vector_test.cc)
-
-add_tsan_unittest(TsanUnitTest
-  SOURCES ${TSAN_UNIT_TEST_SOURCES})
+version https://git-lfs.github.com/spec/v1
+oid sha256:522230062aefbd1b957e883542b52bed386e0a883eb2bad8fc42db2b30497815
+size 290

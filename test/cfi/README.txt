@@ -1,8 +1,3 @@
-The tests in this directory use a common convention for exercising the
-functionality associated with bit sets of different sizes. When certain
-macros are defined the tests instantiate classes that force the bit sets
-to be of certain sizes.
-
-- B32 forces 32-bit bit sets.
-- B64 forces 64-bit bit sets.
-- BM forces memory bit sets.
+version https://git-lfs.github.com/spec/v1
+oid sha256:3377322ab2fb184815c24ca973b8fc9b6157c7c8f37ee1a3bf373bb5b847f4f3
+size 330

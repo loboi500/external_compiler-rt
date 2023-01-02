@@ -1,18 +1,3 @@
-for FILE in $(ls *.c); do
-	if gcc -arch ppc -O0 $FILE ../../../Release/ppc/libcompiler_rt.Optimized.a -mlong-double-128
-	then
-	    echo "Testing $FILE"
-		if ./a.out
-		then
-			rm ./a.out
-		else
-			echo "fail"
-# 			exit 1
-		fi
-	else
-		echo "$FILE failed to compile"
-#		exit 1
-	fi
-done
-echo "pass"
-exit
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b63607e390b658cb892ead8c3d5f990ccf95afd8c26b3ac14712c2778a8098d
+size 300

@@ -1,4 +1,3 @@
-file(GLOB filter_files ${CMAKE_CURRENT_SOURCE_DIR}/*.txt)
-foreach(filter_file ${filter_files})
-  set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS ${filter_file})
-endforeach()
+version https://git-lfs.github.com/spec/v1
+oid sha256:00620fa370283794db606c2e574a804966fe6e744af542fa55e859c0462ce8ce
+size 189
